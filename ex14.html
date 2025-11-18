@@ -2,59 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Exercise 14 - Outline, Text, Font</title>
+    <title>Exercise 14</title>
 
     <style>
         body {
+            background: #000;
             font-family: Arial, Helvetica, sans-serif;
-            background: #000;           /* nền đen giống slide */
         }
 
-        .box {
-            background: #f5f5f5;        /* khung xám nhạt ở giữa */
-            width: 600px;
+        .wrapper {
+            background: #f5f5f5;
+            width: 650px;
             margin: 80px auto;
             padding: 40px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            box-shadow: 0 0 20px rgba(0,0,0,0.6);
         }
 
-        h1, h2, h3 {
-            font-family: "Times New Roman", serif;  /* giống font trong hình */
-            margin: 0 0 25px 0;
-        }
-
-        /* Heading 1: có đường kẻ phía trên (overline), chữ to & đậm */
+        /* Heading 1: red + black color, overline */
         h1 {
+            font-family: "Times New Roman", serif;
             font-size: 36px;
             font-weight: bold;
-            text-decoration: overline;
+            margin: 0 0 30px 0;
+
+            /* Red and black color effect */
+            color: #8b0000;                   /* dark red */
+            text-shadow: 1px 1px 0px black;   /* slight black shadow */
+
+            text-decoration: overline;        /* black overline */
         }
 
-        /* Heading 2: italic, nằm trong khung viền vàng (outline) */
+        /* Outer black box */
+        .outer-box {
+            outline: 3px solid black;
+            padding: 8px;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
+        /* Inner yellow outline around Heading 2 */
+        .inner-box {
+            outline: 3px solid #e0e000; /* yellow */
+            padding: 6px 10px;
+        }
+
+        /* Heading 2 inside boxes */
         h2 {
+            font-family: "Times New Roman", serif;
             font-size: 24px;
             font-style: italic;
-            padding: 5px 8px;
-            outline-style: solid;
-            outline-width: 2px;
-            outline-color: #d4d400;    /* vàng */
+            margin: 0;
         }
 
-        /* Heading 3: nhỏ, nằm phía góc phải dưới, có gạch chân nhẹ */
+        /* Heading 3 */
         h3 {
+            font-family: "Times New Roman", serif;
             font-size: 16px;
             text-align: right;
             text-decoration: underline;
             margin-top: 40px;
         }
+
     </style>
 </head>
 <body>
 
-    <div class="box">
+    <div class="wrapper">
+
         <h1>This is heading 1</h1>
-        <h2>This is heading 2</h2>
+
+        <div class="outer-box">
+            <div class="inner-box">
+                <h2>This is heading 2</h2>
+            </div>
+        </div>
+
         <h3>This is heading 3</h3>
+
     </div>
 
 </body>
