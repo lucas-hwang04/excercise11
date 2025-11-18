@@ -2,63 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Exercise 14 – CSS Outline, Text, and Fonts</title>
+    <title>Exercise 14 - Outline, Text, Font</title>
 
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
-            margin: 40px;
+            background: #000;           /* nền đen giống slide */
         }
 
         .box {
-            width: 400px;
-            padding: 20px;
-            margin-bottom: 30px;
+            background: #f5f5f5;        /* khung xám nhạt ở giữa */
+            width: 600px;
+            margin: 80px auto;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
 
-            /* CSS OUTLINE */
-            outline-style: solid;
-            outline-color: #2c7cff;
-            outline-width: 5px;
-            outline-offset: 10px;
+        h1, h2, h3 {
+            font-family: "Times New Roman", serif;  /* giống font trong hình */
+            margin: 0 0 25px 0;
+        }
 
-            /* TEXT */
-            color: #222;
-            text-align: center;
-            text-transform: capitalize;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-
-            /* FONT */
-            font-size: 20px;
+        /* Heading 1: có đường kẻ phía trên (overline), chữ to & đậm */
+        h1 {
+            font-size: 36px;
             font-weight: bold;
+            text-decoration: overline;
         }
 
-        .small-text {
-            font-size: 14px;
-            letter-spacing: 2px;
-            word-spacing: 5px;
+        /* Heading 2: italic, nằm trong khung viền vàng (outline) */
+        h2 {
+            font-size: 24px;
+            font-style: italic;
+            padding: 5px 8px;
+            outline-style: solid;
+            outline-width: 2px;
+            outline-color: #d4d400;    /* vàng */
+        }
+
+        /* Heading 3: nhỏ, nằm phía góc phải dưới, có gạch chân nhẹ */
+        h3 {
+            font-size: 16px;
+            text-align: right;
             text-decoration: underline;
-        }
-
-        .title {
-            font-size: 32px;
-            font-weight: 700;
-            font-family: "Times New Roman", serif;
-            margin-bottom: 20px;
+            margin-top: 40px;
         }
     </style>
 </head>
-
 <body>
 
-    <h1 class="title">Exercise 14 – CSS Outline Demo</h1>
-
     <div class="box">
-        This is a sample box with CSS outline.
+        <h1>This is heading 1</h1>
+        <h2>This is heading 2</h2>
+        <h3>This is heading 3</h3>
     </div>
-
-    <p class="small-text">
-        This line demonstrates letter spacing, word spacing, and text decoration.
-    </p>
 
 </body>
 </html>
