@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Exercise 17 - Responsive Layout</title>
+
+<style>
+    body{
+        margin:0;
+        padding:20px;
+        background:#3399cc;
+        font-family: Arial, sans-serif;
+    }
+
+    /* ======= MAIN CONTAINER ======= */
+    .card{
+        background:white;
+        border-radius:12px;
+        padding:20px;
+        max-width:900px;
+        margin:auto;
+        box-sizing:border-box;
+    }
+
+    /* ======= HEADER ======= */
+    .header{
+        background:#b4d430;
+        height:120px;
+        border-radius:6px;
+        margin-bottom:15px;
+    }
+
+    /* ======= CONTENT AREA ======= */
+    .content{
+        display:flex;
+        flex-direction:column;     /* mobile default */
+        gap:10px;
+        margin-bottom:15px;
+    }
+
+    .box{
+        background:#25c1c5;
+        height:80px;
+        border-radius:6px;
+    }
+
+    /* ======= FOOTER ======= */
+    .footer{
+        height:70px;
+        background:#ddd;
+        border-radius:6px;
+    }
+
+    /* ======= MEDIA QUERY ======= */
+    @media (min-width:720px){
+
+        .content{
+            flex-direction:row;
+        }
+
+        .box{
+            flex:1;
+            height:120px;
+        }
+    }
+</style>
+</head>
+
+
+<body>
+
+<div class="card">
+
+    <div class="header"></div>
+
+    <div class="content">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <div class="footer"></div>
+
+</div>
+
+</body>
+</html>
