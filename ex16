@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS Transition Practice</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+}
+
+.container{
+    margin: 50px;
+}
+
+/* Common square style */
+.square{
+    width: 100px;
+    height: 100px;
+    background: pink;
+    margin-bottom: 40px;
+    transition: all 0.5s ease;
+}
+
+/* Square 1: becomes longer (increase width) */
+.square1:hover{
+    width: 350px;
+}
+
+/* Square 2: becomes larger (increase both width & height) */
+.square2:hover{
+    width: 200px;
+    height: 200px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>CSS Transition Practice</h2>
+
+<div class="container">
+    <div class="square square1">1</div>
+    <div class="square square2">2</div>
+</div>
+
+</body>
+</html>
